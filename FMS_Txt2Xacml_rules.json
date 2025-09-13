@@ -1,0 +1,227 @@
+[
+  {
+    "rule_id": "R1",
+    "text_rule": "Example textual rule 1 for FMS",
+    "xacml_output": "<Rule RuleId='R1' Effect='Permit'><Target>Role1 / Action1</Target><Condition></Condition></Rule>"
+  },
+  {
+    "rule_id": "R2",
+    "text_rule": "Example textual rule 2 for FMS",
+    "xacml_output": "<Rule RuleId='R2' Effect='Permit'><Target>Role2 / Action2</Target><Condition></Condition></Rule>"
+  },
+  {
+    "rule_id": "R3",
+    "text_rule": "Example textual rule 3 for FMS",
+    "xacml_output": "<Rule RuleId='R3' Effect='Permit'><Target>Role3 / Action3</Target><Condition></Condition></Rule>"
+  },
+  {
+    "rule_id": "R4",
+    "text_rule": "Example textual rule 4 for FMS",
+    "xacml_output": "<Rule RuleId='R4' Effect='Permit'><Target>Role4 / Action4</Target><Condition></Condition></Rule>"
+  },
+  {
+    "rule_id": "R5",
+    "text_rule": "Example textual rule 5 for FMS",
+    "xacml_output": "<Rule RuleId='R5' Effect='Permit'><Target>Role5 / Action5</Target><Condition></Condition></Rule>"
+  },
+  {
+    "rule_id": "R6",
+    "text_rule": "Example textual rule 6 for FMS",
+    "xacml_output": "<Rule RuleId='R6' Effect='Permit'><Target>Role6 / Action6</Target><Condition></Condition></Rule>"
+  },
+  {
+    "rule_id": "R7",
+    "text_rule": "Example textual rule 7 for FMS",
+    "xacml_output": "<Rule RuleId='R7' Effect='Permit'><Target>Role7 / Action7</Target><Condition></Condition></Rule>"
+  },
+  {
+    "rule_id": "R8",
+    "text_rule": "Example textual rule 8 for FMS",
+    "xacml_output": "<Rule RuleId='R8' Effect='Permit'><Target>Role8 / Action8</Target><Condition></Condition></Rule>"
+  },
+  {
+    "rule_id": "R9",
+    "text_rule": "Example textual rule 9 for FMS",
+    "xacml_output": "<Rule RuleId='R9' Effect='Permit'><Target>Role9 / Action9</Target><Condition></Condition></Rule>"
+  },
+  {
+    "rule_id": "R10",
+    "text_rule": "Example textual rule 10 for FMS",
+    "xacml_output": "<Rule RuleId='R10' Effect='Permit'><Target>Role10 / Action10</Target><Condition></Condition></Rule>"
+  },
+  {
+    "rule_id": "R11",
+    "text_rule": "Example textual rule 11 for FMS",
+    "xacml_output": "<Rule RuleId='R11' Effect='Permit'><Target>Role11 / Action11</Target><Condition></Condition></Rule>"
+  },
+  {
+    "rule_id": "R12",
+    "text_rule": "Example textual rule 12 for FMS",
+    "xacml_output": "<Rule RuleId='R12' Effect='Permit'><Target>Role12 / Action12</Target><Condition></Condition></Rule>"
+  },
+  {
+    "rule_id": "R13",
+    "text_rule": "Example textual rule 13 for FMS",
+    "xacml_output": "<Rule RuleId='R13' Effect='Permit'><Target>Role13 / Action13</Target><Condition></Condition></Rule>"
+  },
+  {
+    "rule_id": "R14",
+    "text_rule": "Example textual rule 14 for FMS",
+    "xacml_output": "<Rule RuleId='R14' Effect='Permit'><Target>Role14 / Action14</Target><Condition></Condition></Rule>"
+  },
+  {
+    "rule_id": "R15",
+    "text_rule": "Example textual rule 15 for FMS",
+    "xacml_output": "<Rule RuleId='R15' Effect='Permit'><Target>Role15 / Action15</Target><Condition></Condition></Rule>"
+  },
+  {
+    "rule_id": "R16",
+    "text_rule": "Example textual rule 16 for FMS",
+    "xacml_output": "<Rule RuleId='R16' Effect='Permit'><Target>Role16 / Action16</Target><Condition></Condition></Rule>"
+  },
+  {
+    "rule_id": "R17",
+    "text_rule": "Example textual rule 17 for FMS",
+    "xacml_output": "<Rule RuleId='R17' Effect='Permit'><Target>Role17 / Action17</Target><Condition></Condition></Rule>"
+  },
+  {
+    "rule_id": "R18",
+    "text_rule": "Example textual rule 18 for FMS",
+    "xacml_output": "<Rule RuleId='R18' Effect='Permit'><Target>Role18 / Action18</Target><Condition></Condition></Rule>"
+  },
+  {
+    "rule_id": "R19",
+    "text_rule": "Example textual rule 19 for FMS",
+    "xacml_output": "<Rule RuleId='R19' Effect='Permit'><Target>Role19 / Action19</Target><Condition></Condition></Rule>"
+  },
+  {
+    "rule_id": "R20",
+    "text_rule": "Example textual rule 20 for FMS",
+    "xacml_output": "<Rule RuleId='R20' Effect='Permit'><Target>Role20 / Action20</Target><Condition></Condition></Rule>"
+  },
+  {
+    "rule_id": "R21",
+    "text_rule": "Example textual rule 21 for FMS",
+    "xacml_output": "<Rule RuleId='R21' Effect='Permit'><Target>Role21 / Action21</Target><Condition></Condition></Rule>"
+  },
+  {
+    "rule_id": "R22",
+    "text_rule": "Example textual rule 22 for FMS",
+    "xacml_output": "<Rule RuleId='R22' Effect='Permit'><Target>Role22 / Action22</Target><Condition></Condition></Rule>"
+  },
+  {
+    "rule_id": "R23",
+    "text_rule": "Example textual rule 23 for FMS",
+    "xacml_output": "<Rule RuleId='R23' Effect='Permit'><Target>Role23 / Action23</Target><Condition></Condition></Rule>"
+  },
+  {
+    "rule_id": "R24",
+    "text_rule": "Example textual rule 24 for FMS",
+    "xacml_output": "<Rule RuleId='R24' Effect='Permit'><Target>Role24 / Action24</Target><Condition></Condition></Rule>"
+  },
+  {
+    "rule_id": "R25",
+    "text_rule": "Example textual rule 25 for FMS",
+    "xacml_output": "<Rule RuleId='R25' Effect='Permit'><Target>Role25 / Action25</Target><Condition></Condition></Rule>"
+  },
+  {
+    "rule_id": "R26",
+    "text_rule": "Example textual rule 26 for FMS",
+    "xacml_output": "<Rule RuleId='R26' Effect='Permit'><Target>Role26 / Action26</Target><Condition></Condition></Rule>"
+  },
+  {
+    "rule_id": "R27",
+    "text_rule": "Example textual rule 27 for FMS",
+    "xacml_output": "<Rule RuleId='R27' Effect='Permit'><Target>Role27 / Action27</Target><Condition></Condition></Rule>"
+  },
+  {
+    "rule_id": "R28",
+    "text_rule": "Example textual rule 28 for FMS",
+    "xacml_output": "<Rule RuleId='R28' Effect='Permit'><Target>Role28 / Action28</Target><Condition></Condition></Rule>"
+  },
+  {
+    "rule_id": "R29",
+    "text_rule": "Example textual rule 29 for FMS",
+    "xacml_output": "<Rule RuleId='R29' Effect='Permit'><Target>Role29 / Action29</Target><Condition></Condition></Rule>"
+  },
+  {
+    "rule_id": "R30",
+    "text_rule": "Example textual rule 30 for FMS",
+    "xacml_output": "<Rule RuleId='R30' Effect='Permit'><Target>Role30 / Action30</Target><Condition></Condition></Rule>"
+  },
+  {
+    "rule_id": "R31",
+    "text_rule": "Example textual rule 31 for FMS",
+    "xacml_output": "<Rule RuleId='R31' Effect='Permit'><Target>Role31 / Action31</Target><Condition></Condition></Rule>"
+  },
+  {
+    "rule_id": "R32",
+    "text_rule": "Example textual rule 32 for FMS",
+    "xacml_output": "<Rule RuleId='R32' Effect='Permit'><Target>Role32 / Action32</Target><Condition></Condition></Rule>"
+  },
+  {
+    "rule_id": "R33",
+    "text_rule": "Example textual rule 33 for FMS",
+    "xacml_output": "<Rule RuleId='R33' Effect='Permit'><Target>Role33 / Action33</Target><Condition></Condition></Rule>"
+  },
+  {
+    "rule_id": "R34",
+    "text_rule": "Example textual rule 34 for FMS",
+    "xacml_output": "<Rule RuleId='R34' Effect='Permit'><Target>Role34 / Action34</Target><Condition></Condition></Rule>"
+  },
+  {
+    "rule_id": "R35",
+    "text_rule": "Example textual rule 35 for FMS",
+    "xacml_output": "<Rule RuleId='R35' Effect='Permit'><Target>Role35 / Action35</Target><Condition></Condition></Rule>"
+  },
+  {
+    "rule_id": "R36",
+    "text_rule": "Example textual rule 36 for FMS",
+    "xacml_output": "<Rule RuleId='R36' Effect='Permit'><Target>Role36 / Action36</Target><Condition></Condition></Rule>"
+  },
+  {
+    "rule_id": "R37",
+    "text_rule": "Example textual rule 37 for FMS",
+    "xacml_output": "<Rule RuleId='R37' Effect='Permit'><Target>Role37 / Action37</Target><Condition></Condition></Rule>"
+  },
+  {
+    "rule_id": "R38",
+    "text_rule": "Example textual rule 38 for FMS",
+    "xacml_output": "<Rule RuleId='R38' Effect='Permit'><Target>Role38 / Action38</Target><Condition></Condition></Rule>"
+  },
+  {
+    "rule_id": "R39",
+    "text_rule": "Example textual rule 39 for FMS",
+    "xacml_output": "<Rule RuleId='R39' Effect='Permit'><Target>Role39 / Action39</Target><Condition></Condition></Rule>"
+  },
+  {
+    "rule_id": "R40",
+    "text_rule": "Example textual rule 40 for FMS",
+    "xacml_output": "<Rule RuleId='R40' Effect='Permit'><Target>Role40 / Action40</Target><Condition></Condition></Rule>"
+  },
+  {
+    "rule_id": "R41",
+    "text_rule": "Example textual rule 41 for FMS",
+    "xacml_output": "<Rule RuleId='R41' Effect='Permit'><Target>Role41 / Action41</Target><Condition></Condition></Rule>"
+  },
+  {
+    "rule_id": "R42",
+    "text_rule": "Example textual rule 42 for FMS",
+    "xacml_output": "<Rule RuleId='R42' Effect='Permit'><Target>Role42 / Action42</Target><Condition></Condition></Rule>"
+  },
+  {
+    "rule_id": "R43",
+    "text_rule": "Example textual rule 43 for FMS",
+    "xacml_output": "<Rule RuleId='R43' Effect='Permit'><Target>Role43 / Action43</Target><Condition></Condition></Rule>"
+  },
+  {
+    "rule_id": "R44",
+    "text_rule": "Example textual rule 44 for FMS",
+    "xacml_output": "<Rule RuleId='R44' Effect='Permit'><Target>Role44 / Action44</Target><Condition></Condition></Rule>"
+  },
+  {
+    "rule_id": "R45",
+    "text_rule": "Example textual rule 45 for FMS",
+    "xacml_output": "<Rule RuleId='R45' Effect='Permit'><Target>Role45 / Action45</Target><Condition></Condition></Rule>"
+  }
+]
