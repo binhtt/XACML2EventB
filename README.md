@@ -1,61 +1,184 @@
 # XACML2Event-B
 
-This repository accompanies the paper **"XACML2Event-B: A formal approach for verifying XACML access control policies using Event-B"**.  
-It provides datasets, a support tool, and Event-B models for reproducing the experiments and verification results.
+This repository provides the supporting artifact for the article  
+**"Xacml2Event-B: a formal approach for verifying XACML access control policies using Event-B"**.
 
----
+It contains the Java implementation of the XACML-to-Event-B transformation tool, the case-study policy data, the Event-B model used for formal verification, experimental results, and documentation for reproducing the transformation and verification workflow.
 
-## 📂 Repository Structure
+## Repository Structure
 
-XACML2Event-B/
-├─ data/ # Experimental datasets (HACS, FMS, SIS)
-├─ tool/ # Java tool for transformations
-└─ rodin_models/ # Event-B models (.ctx, .mch)
+```text
+XACML2EventB/
+├── src/
+│   ├── module-info.java
+│   └── xacml2evtb/
+│       └── Xacml2EventBTool.java
+│
+├── models/
+│   └── FMSEventB/
+│       ├── XACML_Context.ctx
+│       ├── XACML_Refined1_Context.ctx
+│       ├── XACML_AbsMachine.mch
+│       ├── XACML_Refined1_Machine.mch
+│       └── XACML_Refined2_Machine.mch
+│
+├── examples/
+│   ├── HACS/
+│   ├── FMS/
+│   └── SIS/
+│
+├── results/
+│   ├── transformation/
+│   └── verification/
+│
+├── docs/
+│   ├── installation.md
+│   ├── usage.md
+│   └── reproducibility.md
+│
+└── README.md
+```
 
----
+## XACML2Event-B Tool
 
-## 📊 Datasets
+The Java implementation is available under `src/`.
 
-The repository contains three experimental systems: **HACS**, **FMS**, and **SIS**.
+The tool provides three main functions:
 
-- **Txt2Xacml_rules.json**: mapping from textual rules to XACML rules.  
-- **XACML_policies.json**: grouping of rules into policies.  
-- **FMS_45rules_18policies.json**: the complete FMS dataset in a single file.  
+- **Xacml2EvtB** — transforms supported XACML policy structures into Event-B contexts and machines.
+- **Txt2Xacml** — converts structured textual rule descriptions into XACML.
+- **Xacml2Txt** — extracts rule information from XACML into a textual representation.
 
-### Statistics
-- **HACS**: ~42 rules, grouped into multiple policies.  
-- **FMS**: 45 rules, 18 policies.  
-- **SIS**: ~38 rules, grouped into multiple policies.  
+The XACML-to-Event-B transformation generates the following components:
 
----
+```text
+XACML_Context.ctx
+XACML_Refined1_Context.ctx
+XACML_AbsMachine.mch
+XACML_Refined1_Machine.mch
+XACML_Refined2_Machine.mch
+```
 
-## 🔧 Tool
+The generated components follow the successive modeling and refinement structure described in the article.
 
-The Java tool provides three main modules:
+### Supported XACML Constructs
 
-- **Txt2Xacml**: convert rules from natural text into XACML rules.  
-- **Xacml2Txt**: convert XACML rules back to text.  
-- **Xacml2EvtB**: transform XACML policies into Event-B models (.ctx, .mch).  
+The current implementation supports the XACML constructs considered by the framework, including:
 
-🧩 Event-B Models
+- PolicySet
+- Policy
+- Rule
+- Permit and Deny rule effects
+- PermitOverrides
+- DenyOverrides
+- FirstApplicable
 
-The rodin_models/ folder contains Event-B contexts and machines generated from XACML policies.
+The Event-B decision domain additionally includes `NotApplicable` as an evaluation outcome.
 
-Import into Rodin
+## Case-Study Data
 
-Open Rodin IDE.
+The `examples/` directory contains policy data for the three software systems evaluated in the article:
 
-Create a new project or import: File → Import → Rodin Project.
+- **HACS** — Healthcare Access Control System
+- **FMS** — Financial Management System
+- **SIS** — Student Information System
 
-Select the rodin_models/ directory.
+The datasets contain the rule and policy structures used to evaluate the transformation capabilities of XACML2Event-B.
 
-Open .ctx and .mch files and run the prover.
+## Event-B Model
 
-Contents
+The `models/FMSEventB/` directory contains the Event-B model used for formal verification.
 
-XACML_Context.ctx: defines SUBJECT, RESOURCE, ACTION, ENVIRONMENT, RULE, DECISION.
+The model consists of:
 
-XACML_AbsMachine.mch: abstract machine with EvaluateRequest, ApplyRule events.
+- `XACML_Context.ctx` — static XACML concepts, rule effects, and decision domain.
+- `XACML_Refined1_Context.ctx` — policy hierarchy and combining-algorithm definitions.
+- `XACML_AbsMachine.mch` — abstract request evaluation and rule applicability.
+- `XACML_Refined1_Machine.mch` — refinement introducing policy applicability and combining semantics.
+- `XACML_Refined2_Machine.mch` — refinement containing the policy decision correctness properties verified through proof obligations.
 
-XACML_Ref1_Ctx.ctx / XACML_Ref1_Mach.mch: first refinement layer.
-XACML_Ref2_Mach.mch: seccond refinement layer.
+The model can be inspected and verified using the Rodin Platform.
+
+## Requirements
+
+- JDK 17 or later
+- Rodin Platform
+- Eclipse IDE for Java Developers (optional)
+
+The Java implementation uses standard Java libraries and does not require additional third-party Java dependencies.
+
+## Running the Tool
+
+The main Java class is:
+
+```text
+src/xacml2evtb/Xacml2EventBTool.java
+```
+
+In Eclipse:
+
+1. Create or import a Java project using JDK 17 or later.
+2. Add the contents of `src/` to the project.
+3. Open `Xacml2EventBTool.java`.
+4. Select **Run As → Java Application**.
+5. Select the `Xacml2EvtB` tab.
+6. Load an XACML policy and select **Convert -> Event-B**.
+7. Use **Save all** to save the generated Event-B components.
+
+Detailed instructions are provided in [`docs/installation.md`](docs/installation.md) and [`docs/usage.md`](docs/usage.md).
+
+## Reproducing the Verification
+
+The general verification workflow is:
+
+```text
+XACML policy
+     |
+     v
+XACML2Event-B transformation
+     |
+     v
+Event-B contexts and machines
+     |
+     v
+Rodin proof-obligation generation
+     |
+     v
+Automatic / interactive proof
+     |
+     v
+Verification results
+```
+
+To inspect the verified Event-B model:
+
+1. Install the Rodin Platform.
+2. Open or import the model under `models/FMSEventB/`.
+3. Open the contexts and machines in refinement order.
+4. Generate the proof obligations.
+5. Apply the Rodin automatic provers.
+6. Inspect the remaining proof obligations requiring interactive reasoning.
+7. Compare the results with those reported under `results/`.
+
+A detailed reproduction workflow is provided in [`docs/reproducibility.md`](docs/reproducibility.md).
+
+## Experimental Results
+
+The `results/` directory contains supporting results for:
+
+- XACML-to-Event-B transformation experiments.
+- Event-B verification and proof-obligation analysis.
+
+These materials correspond to the experimental evaluation reported in the article.
+
+## Documentation
+
+Additional documentation is available under `docs/`:
+
+- [`installation.md`](docs/installation.md) — installation and execution instructions.
+- [`usage.md`](docs/usage.md) — tool functions and usage workflow.
+- [`reproducibility.md`](docs/reproducibility.md) — steps for reproducing the transformation and formal verification workflow.
+
+## License
+
+The source code and supporting materials are provided for research and reproducibility purposes.
