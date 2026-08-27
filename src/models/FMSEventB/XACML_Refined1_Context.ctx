@@ -1,0 +1,36 @@
+	CONTEXT
+		XACML_Refined1_Context 	›
+	EXTENDS
+	⚬	 XACML_Context 
+	SETS
+	⚬	POLICY	 ›
+	⚬	POLICY_SET	 ›
+	⚬	COMBINING_ALGORITHM	 ›
+	CONSTANTS
+	⚬	policies	 ›
+	⚬	policy_set_policies	 ›
+	⚬	policy_target	 ›
+	⚬	policy_set_target	 ›
+	⚬	PermitOverrides	 ›
+	⚬	DenyOverrides	 ›
+	⚬	FirstApplicable	 ›
+	⚬	combining_alg_policy	 ›
+	⚬	combining_alg_policyset	 ›
+	⚬	rule_order	 ›
+	AXIOMS
+	⚬	axm1:	policies ∈ POLICY → ℙ(RULE) not theorem ›
+	⚬	axm2:	policy_set_policies ∈ POLICY_SET → ℙ(POLICY) not theorem ›
+	⚬	axm3:	policy_target ∈ POLICY → ℙ(SUBJECT × RESOURCE × ACTION × ENVIRONMENT) not theorem ›
+	⚬	axm4:	policy_set_target ∈ POLICY_SET → ℙ(SUBJECT × RESOURCE × ACTION × ENVIRONMENT) not theorem ›
+	⚬	axm5:	partition(
+	 	     	    COMBINING_ALGORITHM,
+	 	     	    {PermitOverrides},
+	 	     	    {DenyOverrides},
+	 	     	    {FirstApplicable}
+	 	     	) not theorem ›
+	⚬	axm6:	combining_alg_policy ∈ POLICY → COMBINING_ALGORITHM not theorem ›
+	⚬	axm7:	combining_alg_policyset ∈ POLICY_SET → COMBINING_ALGORITHM not theorem ›
+	⚬	axm8:	rule_order ∈ POLICY → (RULE → ℕ) not theorem ›
+	⚬	axm9:	∀pol·pol ∈ POLICY ⇒ (∀r1,r2·r1 ∈ policies(pol) ∧ r2 ∈ policies(pol) ∧ r1 ≠ r2 ⇒ 
+	 	     	rule_order(pol)(r1) ≠ rule_order(pol)(r2)) not theorem ›
+	END
