@@ -1,0 +1,23 @@
+	CONTEXT
+		XACML_Context 	›
+	SETS
+	⚬	SUBJECT	 ›
+	⚬	RESOURCE	 ›
+	⚬	ACTION	 ›
+	⚬	ENVIRONMENT	 ›
+	⚬	RULE	 ›
+	⚬	DECISION	 ›
+	CONSTANTS
+	⚬	target	 ›
+	⚬	condition	 ›
+	⚬	effect	 ›
+	⚬	Permit	 ›
+	⚬	Deny	 ›
+	⚬	NotApplicable	 ›
+	AXIOMS
+	⚬	axm1:	target ∈ RULE → ℙ(SUBJECT × RESOURCE × ACTION × ENVIRONMENT) not theorem ›
+	⚬	axm2:	condition ∈ RULE → (SUBJECT × RESOURCE × ACTION × ENVIRONMENT → BOOL) not theorem ›
+	⚬	axm3:	effect ∈ RULE → DECISION not theorem ›
+	⚬	axm4:	partition(DECISION, {Permit}, {Deny}, {NotApplicable}) not theorem ›
+	⚬	axm5:	NotApplicable ∉ ran(effect) not theorem ›
+	END
